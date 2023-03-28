@@ -1,9 +1,15 @@
+
+
 .header_container{
-    width: 100%;
+    width: 90%;
     height : 100px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .main_name{

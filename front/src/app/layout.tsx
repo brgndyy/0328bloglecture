@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import Header from "@/components/Header/Header";
 import Card from "@/components/Card/Card";
+import ContentCard from "@/components/Card/ContentCard";
 
 const myFont = localFont({
   src: "./fonts/RobotoCondensed-Bold.ttf",
@@ -19,7 +20,7 @@ export default function RootLayout({
       <body>
         <Card>
           <Header />
-          {children}
+          <ContentCard>{children}</ContentCard>
         </Card>
       </body>
     </html>
