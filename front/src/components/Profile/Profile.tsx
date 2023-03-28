@@ -1,5 +1,5 @@
 import classes from "./Profile.module.css";
-import profileImg from "../../../public/image/profile.jpeg";
+import profileImg from "../../../public/images/profile.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 
