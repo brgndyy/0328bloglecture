@@ -10,6 +10,8 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 10;
+    background: rgb(189, 102, 102);
 }
 
 .main_name{
@@ -45,4 +47,8 @@
 
 .link:visited{
     text-decoration: none;
+}
+
+.link_span:hover{
+   color: rgba(0, 0, 0, 0.8);
 }

@@ -13,22 +13,22 @@ export default function Header() {
         <div className={classes.header_category_container}>
           <div className={classes.category}>
             <Link href={"/"} className={classes.link}>
-              <span>home</span>
+              <span className={classes.link_span}>home</span>
             </Link>
           </div>
           <div className={classes.category}>
             <Link href={"/about"} className={classes.link}>
-              <span>about</span>
+              <span className={classes.link_span}>about</span>
             </Link>
           </div>
           <div className={classes.category}>
             <Link href={"/posts"} className={classes.link}>
-              <span>posts</span>
+              <span className={classes.link_span}>posts</span>
             </Link>
           </div>
           <div className={classes.category}>
             <Link href={"/contact"} className={classes.link}>
-              <span>contact</span>
+              <span className={classes.link_span}>contact</span>
             </Link>
           </div>
         </div>
