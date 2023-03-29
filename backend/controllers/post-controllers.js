@@ -5,7 +5,7 @@ const getAllPosts = async (req, res) => {
   let posts;
 
   try {
-    posts = Post.findAll({});
+    posts = await Post.findAll();
   } catch (err) {
     const error = new HttpError("게시물을 불러오는데에 실패했어요!", 500);
     return next(error);
