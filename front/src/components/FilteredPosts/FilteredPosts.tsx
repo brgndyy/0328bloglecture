@@ -14,7 +14,7 @@ export default function FilteredPosts({ posts }: postType) {
   return (
     <>
       <div className={classes.posts_page_container}>
-        <PostList posts={posts} />
+        <PostList posts={filteredPosts} />
         <div className={classes.select_category_container}>
           <span>
             <h2>Category</h2>
