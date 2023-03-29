@@ -1,0 +1,12 @@
+.selected{
+    color: rgb(156, 53, 63);
+    text-align: center;
+    margin : 3px 0;
+    cursor: pointer;
+}
+
+.not_selected{
+    text-align: center;
+    margin : 3px 0;
+    cursor: pointer;
+}
