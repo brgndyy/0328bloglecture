@@ -1,6 +1,11 @@
 import Profile from "@/components/Profile/Profile";
+import { getPostData } from "./api/getData/getData";
 
-export default function Home() {
+export default async function Home() {
+  const postData = await getPostData();
+
+  console.log(postData);
+
   return (
     <>
       <>
