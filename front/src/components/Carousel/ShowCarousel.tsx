@@ -33,6 +33,7 @@ export default function ShowCarousel({ carouselPosts }: CarouselPostType) {
     <>
       <h1 className={classes.logo}>You May Like</h1>
       <div className={classes.carousel_container}>
+        {/* Carousel 컴포넌트 자체가 li태그를 포함하고 있다 */}
         <Carousel
           responsive={responsive}
           ssr={true}

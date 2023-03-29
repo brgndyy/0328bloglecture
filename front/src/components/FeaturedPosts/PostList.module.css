@@ -4,11 +4,21 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    gap: 40px;
+    gap: 20px;
+    animation : fadeIn 0.3s forwards;
 }
 
 
 
 .text{
     margin-left : 20px;
+}
+
+
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    } to
+    { opacity: 1;}
 }
