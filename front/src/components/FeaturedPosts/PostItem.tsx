@@ -1,4 +1,4 @@
-import classes from "./FeaturedPostItem.module.css";
+import classes from "./PostItem.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ type postType = {
   imgUrl: string;
 };
 
-export default function FeaturedPostItem({
+export default function PostItem({
   title,
   description,
   date,

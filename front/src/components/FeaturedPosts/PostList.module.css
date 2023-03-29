@@ -1,6 +1,7 @@
 .featuredList_container{
     width: 100%;
     padding-bottom: 100px;
+    position: relative;
 }
 
 .featuredList_ul{

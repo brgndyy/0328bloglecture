@@ -42,3 +42,11 @@ export const getFeaturedPostData = async () => {
 
   return featuredData;
 };
+
+export const getCarouselData = async () => {
+  const allData = await getAllPostData();
+
+  const carouselData = allData.filter((item) => !item.featured);
+
+  return carouselData;
+};

@@ -1,32 +1,20 @@
-import classes from "./FeaturedPostList.module.css";
-import FeaturedPostItem from "./FeaturedPostItem";
+import classes from "./PostList.module.css";
+import PostItem from "./PostItem";
+import { postsType } from "../../../types/postsType";
 
-type postsType = {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  category: string;
-  path: string;
-  imgUrl: string;
-  featured: boolean;
+type PostListProps = {
+  posts: postsType[];
 };
 
-type FeaturedPostListProps = {
-  featuredPosts: postsType[];
-};
-
-export default function FeaturedPostList({
-  featuredPosts,
-}: FeaturedPostListProps) {
+export default function PostList({ posts }: PostListProps) {
   return (
     <>
       <div className={classes.featuredList_container}>
         <h1>Featured Posts</h1>
         <ul className={classes.featuredList_ul}>
-          {featuredPosts.map((post) => {
+          {posts.map((post) => {
             return (
-              <FeaturedPostItem
+              <PostItem
                 key={post.id}
                 id={post.id}
                 title={post.title}
