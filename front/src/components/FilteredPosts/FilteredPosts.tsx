@@ -1,7 +1,7 @@
 "use client";
 
 import { postsType } from "../../../types/postsType";
-import PostList from "../FeaturedPosts/PostList";
+import PostList from "../Posts/PostList";
 import classes from "./FilteredPosts.module.css";
 
 type postType = {
@@ -13,16 +13,18 @@ export default function FilteredPosts({ posts }: postType) {
 
   return (
     <>
-      <PostList posts={filteredPosts} />
-      <div className={classes.select_category_container}>
-        <span>
-          <h2>Category</h2>
-        </span>
-        <option selected>All Posts</option>
-        <option>My story</option>
-        <option>Frontend</option>
-        <option>Backend</option>
-        <option>Javascript</option>
+      <div className={classes.posts_page_container}>
+        <PostList posts={posts} />
+        <div className={classes.select_category_container}>
+          <span>
+            <h2>Category</h2>
+          </span>
+          <option selected>All Posts</option>
+          <option>My story</option>
+          <option>Frontend</option>
+          <option>Backend</option>
+          <option>Javascript</option>
+        </div>
       </div>
     </>
   );

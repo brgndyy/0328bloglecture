@@ -1,5 +1,5 @@
 .posts_page_card{
 
     display: flex;
-    justify-content: flex-start;
+    height : 1000px;
 }
