@@ -1,4 +1,9 @@
-
+.profile_img_container{
+    padding-top: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .profile_img{
     border-radius: 50%;
     object-fit: fill;
@@ -32,7 +37,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: rgb(159, 92, 107);
+    background-color: rgb(178, 82, 82);
 }
 
 .profile_link{
@@ -43,5 +48,5 @@
 }
 
 .link_container:hover{
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
 }

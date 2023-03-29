@@ -11,7 +11,7 @@ const getAllPosts = async (req, res) => {
     return next(error);
   }
 
-  res.json({ message: "게시글", posts: posts });
+  res.json({ posts: posts });
 };
 
 const getFeaturedPosts = async (req, res) => {

@@ -8,6 +8,7 @@ type postsType = {
   date: string;
   category: string;
   path: string;
+  imgUrl: string;
   featured: boolean;
 };
 
@@ -21,7 +22,8 @@ export default function FeaturedPostList({
   return (
     <>
       <div className={classes.featuredList_container}>
-        <ul>
+        <h1>Featured Posts</h1>
+        <ul className={classes.featuredList_ul}>
           {featuredPosts.map((post) => {
             return (
               <FeaturedPostItem
@@ -33,6 +35,7 @@ export default function FeaturedPostList({
                 category={post.category}
                 path={post.path}
                 featured={post.featured}
+                imgUrl={post.imgUrl}
               />
             );
           })}

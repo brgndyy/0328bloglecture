@@ -11,4 +11,5 @@ body{
   height: 100vh;
   margin: 0;
   background: rgb(189, 102, 102);
+  overflow: scroll;
 }

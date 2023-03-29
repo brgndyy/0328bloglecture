@@ -21,8 +21,10 @@ export default function RootLayout({
       <body>
         <Card>
           <Header />
-          <ContentCard>{children}</ContentCard>
-          <Footer />
+          <ContentCard>
+            {children}
+            <Footer />
+          </ContentCard>
         </Card>
       </body>
     </html>
