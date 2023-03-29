@@ -10,11 +10,10 @@ export default async function Home() {
 
   return (
     <>
-      <>
-        <Profile />
-        <PostList posts={featuredPosts} />
-        <ShowCarousel carouselPosts={carouselPosts} />
-      </>
+      <Profile />
+      <h1>Featured Posts</h1>
+      <PostList posts={featuredPosts} />
+      <ShowCarousel carouselPosts={carouselPosts} />
     </>
   );
 }

@@ -23,32 +23,34 @@ export default function PostItem({
   imgUrl,
 }: postType) {
   return (
-    <Link href={`/posts/${path}`} className={classes.post_link}>
-      <li className={classes.postItem_li}>
-        <div className={classes.postItem_img_container}>
-          <Image
-            src={imgUrl}
-            alt={title}
-            width={300}
-            height={250}
-            className={classes.post_img}
-          />
-        </div>
-        <div className={classes.postItem_info_container}>
-          <div className={classes.postItem_info_date}>
-            <p>{date}</p>
+    <>
+      <div className={classes.postItem_li}>
+        <Link href={`/posts/${path}`} className={classes.post_link}>
+          <div className={classes.postItem_img_container}>
+            <Image
+              src={imgUrl}
+              alt={title}
+              width={300}
+              height={250}
+              className={classes.post_img}
+            />
           </div>
-          <div className={classes.postItem_info_title}>
-            <p>{title}</p>
+          <div className={classes.postItem_info_container}>
+            <div className={classes.postItem_info_date}>
+              <p>{date}</p>
+            </div>
+            <div className={classes.postItem_info_title}>
+              <p>{title}</p>
+            </div>
+            <div className={classes.postItem_info_description}>
+              <p>{description}</p>
+            </div>
+            <div className={classes.postItem_info_category}>
+              <p>{category}</p>
+            </div>
           </div>
-          <div className={classes.postItem_info_description}>
-            <p>{description}</p>
-          </div>
-          <div className={classes.postItem_info_category}>
-            <p>{category}</p>
-          </div>
-        </div>
-      </li>
-    </Link>
+        </Link>
+      </div>
+    </>
   );
 }

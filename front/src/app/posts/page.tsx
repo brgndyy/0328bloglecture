@@ -1,11 +1,15 @@
 import { getAllPostData } from "../api/getData/getData";
+import PostList from "@/components/FeaturedPosts/PostList";
+import PostsPageCard from "@/components/Card/PostsPageCard";
 
 export default async function Page() {
   const allData = await getAllPostData();
 
   return (
     <>
-      <h1>Posts 페이지입니다.</h1>
+      <PostsPageCard>
+        <PostList posts={allData} />
+      </PostsPageCard>
     </>
   );
 }

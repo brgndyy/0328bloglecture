@@ -13,3 +13,7 @@ body{
   background: rgb(189, 102, 102);
   overflow: scroll;
 }
+
+h1{
+  margin-left:  20px;
+}
