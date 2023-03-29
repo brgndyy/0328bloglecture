@@ -1,3 +1,5 @@
 .posts_page_card{
-    padding-top : 800px;
+
+    display: flex;
+    justify-content: flex-start;
 }

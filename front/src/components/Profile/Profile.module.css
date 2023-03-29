@@ -1,3 +1,7 @@
+.profile_container{
+    animation: fadeIn 0.3s forwards;
+}
+
 .profile_img_container{
     padding-top: 1400px;
     display: flex;
@@ -49,4 +53,12 @@
 
 .link_container:hover{
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    } to
+    { opacity: 1;}
 }
