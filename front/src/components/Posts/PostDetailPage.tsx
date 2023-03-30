@@ -41,7 +41,7 @@ export default function PostDetailPage({
       </div>
 
       <MarkDownPost post={postData.content} />
-      <NextOrPrevPost />
+      <NextOrPrevPost slideData={slideData} />
     </div>
   );
 }
