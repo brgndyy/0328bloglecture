@@ -1,9 +1,13 @@
-import React from "react";
+import ContactInfo from "@/components/Contact/ContactInfo";
+import ContactEmailForm from "@/components/Contact/ContactEmailForm";
 
 export default function Page() {
   return (
     <>
-      <h1>Contact 페이지입니다.</h1>
+      <>
+        <ContactInfo />
+        <ContactEmailForm />
+      </>
     </>
   );
 }
