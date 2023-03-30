@@ -1,0 +1,34 @@
+.profile_summary_container{
+    width: 100%;
+    height : 100%;
+    background: rgb(189, 102, 102);
+    display: flex;
+    flex-direction : column;
+   justify-content: center;
+    align-items : center;
+    padding: 80px;
+
+
+}
+
+.who_am_i{
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items:center;
+}
+
+
+.career{
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items:center;
+}
+
+.skills{
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items:center;
+}

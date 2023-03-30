@@ -1,7 +1,11 @@
+import Profile from "@/components/Profile/Profile";
+import ProfileSummary from "@/components/Profile/ProfileSummary";
+
 export default function Page() {
   return (
     <>
-      <h1>About 페이지입니다.</h1>
+      <Profile />
+      <ProfileSummary />
     </>
   );
 }
