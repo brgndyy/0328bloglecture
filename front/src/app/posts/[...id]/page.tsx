@@ -8,6 +8,7 @@ type Params = {
 export default async function page({ params }: { params: Params }) {
   const pageParams = params.id;
   const postData = await getPostData(pageParams);
+  console.log(postData);
 
   return (
     <>

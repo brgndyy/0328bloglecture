@@ -1,0 +1,43 @@
+.post_detail_container{
+    background: rgb(189, 93, 93);
+   
+}
+
+.postData_summary{
+    display: flex;
+    flex-direction : column;
+}
+.date_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(117, 42, 69);
+}
+
+.icon{
+    display: flex;
+    justify-content : center;
+    align-items : center;  
+    margin-bottom: 2px;
+    margin-right: 10px;
+}
+
+.date{
+    display: flex;
+    justify-content : center;
+    align-items : center;
+}
+.description_container{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+.post_detail_img_container{
+    width: 100%;
+}
+
+.post_detail_img{
+    width: 100%;
+    object-fit : cover;
+}
