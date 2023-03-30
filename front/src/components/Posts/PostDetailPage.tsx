@@ -5,11 +5,15 @@ import Image from "next/image";
 import { AiTwotoneCalendar } from "react-icons/ai";
 import NextOrPrevPost from "./NextOrPrevPost";
 
-type postType = {
-  postData: PostData;
+type PostDetailPageProps = {
+  postData: PostData["postData"];
+  slideData: PostData["slideData"];
 };
 
-export default function PostDetailPage({ postData }: postType) {
+export default function PostDetailPage({
+  postData,
+  slideData,
+}: PostDetailPageProps) {
   return (
     <div className={classes.post_detail_container}>
       <div className={classes.post_detail_img_container}>

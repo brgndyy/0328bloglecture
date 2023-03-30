@@ -60,5 +60,17 @@ export const getPostData = async (fileName: string): Promise<PostData> => {
 
   const content = await readFile(filePath, "utf-8");
 
-  return { ...metaData, content };
+  let slideData = [];
+
+  if (metaData.id === 1) {
+    slideData.push(allData[1]);
+  } else if (metaData.id === allData.length) {
+    slideData.push(allData[allData.length]);
+  } else {
+    slideData.push(allData[metaData.id - 2], allData[metaData.id]);
+  }
+
+  const postData = { ...metaData, content };
+
+  return { postData, slideData };
 };
