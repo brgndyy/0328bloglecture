@@ -65,7 +65,7 @@ export const getPostData = async (fileName: string): Promise<PostData> => {
   if (metaData.id === 1) {
     slideData.push(allData[1]);
   } else if (metaData.id === allData.length) {
-    slideData.push(allData[allData.length]);
+    slideData.push(allData[allData.length - 2]);
   } else {
     slideData.push(allData[metaData.id - 2], allData[metaData.id]);
   }

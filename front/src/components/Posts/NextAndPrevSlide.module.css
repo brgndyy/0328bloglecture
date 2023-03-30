@@ -1,0 +1,87 @@
+.prev_and_next_container{
+    width: 100%;
+    height : auto;
+    display: flex;
+}
+
+
+.prev_container{
+    width: 50%;
+    position: relative;
+}
+
+.next_container{
+    width: 50%;
+    position:relative;
+}
+
+.prev_post_info_container{
+        width: 100%;
+        height : 300px;
+        position : absolute;
+        top : 0;
+        z-index : 10;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+}
+
+.next_post_info_container{
+    width: 100%;
+    height : 300px;
+    position : absolute;
+    top : 0;
+    z-index : 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.prev_info{
+    display: flex;
+    flex-direction: row;
+}
+
+.prev_arrow{
+    position: absolute;
+    left : 0;
+    top : 40%;
+    font-size: 50px;
+    color : yellow;
+    margin-left: 20px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.next_arrow{
+    position: absolute;
+    right : 0;
+    top : 40%;
+    font-size: 50px;
+    color : yellow;
+    margin-left: 20px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.info{
+    color : #fff;
+    text-align: center;
+}
+
+
+.prevImg{
+    width: 100%;
+    object-fit: cover;
+}
+.nextImg{
+    width: 100%;
+    object-fit: cover;
+}

@@ -1,6 +1,6 @@
 .post_detail_container{
     background: rgb(189, 93, 93);
-   
+    animation: fadeIn 0.3s forwards;
 }
 
 .postData_summary{
@@ -40,4 +40,13 @@
 .post_detail_img{
     width: 100%;
     object-fit : cover;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

@@ -1,0 +1,17 @@
+.slideData_container{
+    width: 100%;
+    height : auto;
+    position: relative;
+    animation: fadeIn 0.3s forwards;
+}
+
+
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
