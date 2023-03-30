@@ -9,4 +9,9 @@ export type postsType = {
   featured: boolean;
 };
 
-export type PostData = postsType & { content: string };
+export type PostData = {
+  postData: postsType & {
+    content: string;
+  };
+  slideData: postsType[];
+};
