@@ -1,6 +1,6 @@
 "use client";
 
-import { postsType } from "../../../types/postsType";
+import { postsType } from "../../../types/Type";
 import PostList from "../Posts/PostList";
 import classes from "./FilteredPosts.module.css";
 import CategorySelect from "../CategorySelect/CategorySelect";

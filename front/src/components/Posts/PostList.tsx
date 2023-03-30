@@ -1,6 +1,6 @@
 import classes from "./PostList.module.css";
 import PostItem from "./PostItem";
-import { postsType } from "../../../types/postsType";
+import { postsType } from "../../../types/Type";
 
 type PostListProps = {
   posts: postsType[];

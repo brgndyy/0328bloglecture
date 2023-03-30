@@ -3,7 +3,7 @@
 import classes from "./ShowCarousel.module.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { postsType } from "../../../types/postsType";
+import { postsType } from "../../../types/Type";
 import PostItem from "../Posts/PostItem";
 
 type CarouselPostType = {

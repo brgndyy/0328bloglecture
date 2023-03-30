@@ -1,23 +1,17 @@
-type PostType = {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  path: string;
-  category: string;
-  featured: string;
-  imgUrl: string;
-};
+import { postsType } from "../../../../types/Type";
+import { readFile } from "fs/promises";
+import path from "path";
+import { PostData } from "../../../../types/Type";
 
 export const getAllPostData = async () => {
   const res = await fetch("http:///localhost:3002/api/post", {
     cache: "no-store",
   });
   const data = await res.json();
-  const totalData: PostType[] = data.posts;
+  const totalData: postsType[] = data.posts;
 
   let withUrlData = totalData.map(
-    ({ id, title, description, date, category, path, featured }: PostType) => {
+    ({ id, title, description, date, category, path, featured }: postsType) => {
       const imgUrl = `/images/posts/${id}.png`;
       return {
         id,
@@ -31,7 +25,6 @@ export const getAllPostData = async () => {
       };
     }
   );
-
   return withUrlData;
 };
 
@@ -49,4 +42,23 @@ export const getCarouselData = async () => {
   const carouselData = allData.filter((item) => !item.featured);
 
   return carouselData;
+};
+
+export const getPostData = async (fileName: string): Promise<PostData> => {
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "posts",
+    `${fileName}.md`
+  );
+  const allData = await getAllPostData();
+  const metaData = allData.find((post) => post.path === fileName.toString());
+
+  if (!metaData) {
+    throw new Error(`해당 파일을 찾을 수 없습니다: ${fileName}`);
+  }
+
+  const content = await readFile(filePath, "utf-8");
+
+  return { ...metaData, content };
 };

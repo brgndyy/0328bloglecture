@@ -8,3 +8,5 @@ export type postsType = {
   imgUrl: string;
   featured: boolean;
 };
+
+export type PostData = postsType & { content: string };

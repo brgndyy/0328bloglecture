@@ -1,9 +1,17 @@
+import PostDetailPage from "@/components/Posts/PostDetailPage";
+import { getPostData } from "@/app/api/getData/getData";
+
 type Params = {
   id: string;
 };
 
-export default function page({ params }: { params: Params }) {
-  console.log(params);
+export default async function page({ params }: { params: Params }) {
+  const pageParams = params.id;
+  const postData = await getPostData(pageParams);
 
-  return <div>{params.id} 페이지</div>;
+  return (
+    <>
+      <PostDetailPage postData={postData} />
+    </>
+  );
 }
