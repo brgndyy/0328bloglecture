@@ -7,7 +7,9 @@ export default function ContactInfo() {
       <div className={classes.info}>
         <h1>Contact Me</h1>
         <span>brgndy96@gmail.com</span>
-        <AiFillGithub />
+        <span className={classes.git_icon}>
+          <AiFillGithub />
+        </span>
       </div>
       <div className={classes.sendmail}>
         <h1>Or Send me an email</h1>
