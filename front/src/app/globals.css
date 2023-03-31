@@ -20,6 +20,33 @@ a:hover {
 a:active {
     text-decoration: none;
 }
+input{
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+input:focus{
+  outline: none;
+  border-radius: 10px;
+  border: none;
+}
+
+textarea{
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+button{
+  border: none;
+  padding : 5px;
+  cursor: pointer;
+}
+
+textarea:focus{
+  outline: none;
+}
 
 body{
   width: 100vw;

@@ -6,7 +6,9 @@ export default function ContactInfo() {
     <div className={classes.info_container}>
       <div className={classes.info}>
         <h1>Contact Me</h1>
-        <span>brgndy96@gmail.com</span>
+        <span>
+          <p>brgndy96@gmail.com</p>
+        </span>
         <span className={classes.git_icon}>
           <AiFillGithub />
         </span>
