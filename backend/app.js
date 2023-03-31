@@ -8,6 +8,7 @@ const cookieParser = require("cookie-parser");
 const HttpError = require("./error/http-error");
 const { sequelize } = require("./models");
 const postRoutes = require("./routes/post-routes");
+const contactRoutes = require("./routes/contact-routes");
 
 const corsOption = {
   origin: "http://localhost:3000",
@@ -39,6 +40,7 @@ app.use(cors(corsOption));
 app.use(helmet());
 
 app.use("/api/post", postRoutes);
+app.use("/api/contact", contactRoutes);
 
 app.use((req, res, next) => {
   const error = new HttpError("해당 페이지를 찾을 수 없어요!", 404);
