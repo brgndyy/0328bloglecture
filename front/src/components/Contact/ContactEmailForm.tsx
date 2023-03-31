@@ -1,6 +1,7 @@
 "use client";
 
 import classes from "./ContactEmailForm.module.css";
+import SuccessOrFail from "./SuccessOrFail";
 import { useRef, useState, useEffect } from "react";
 
 export default function ContactEmailForm() {
@@ -46,8 +47,8 @@ export default function ContactEmailForm() {
 
   return (
     <>
-      {submitComplete && <p>전송이 완료 되었어요!</p>}
       <div className={classes.email_form_container}>
+        {submitComplete && <SuccessOrFail />}
         <form className={classes.contact_form} onSubmit={submitHandler}>
           <div className={classes.email_input}>
             <label htmlFor="email">Your Email</label>
