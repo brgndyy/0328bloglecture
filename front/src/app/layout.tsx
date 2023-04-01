@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   description: "BRGNDY 개인 블로그",
   icons: {
-    icon: "/favicon.ico",
+    icon: "favicon.ico",
   },
 };
 
