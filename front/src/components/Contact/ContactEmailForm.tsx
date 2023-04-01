@@ -4,11 +4,17 @@ import classes from "./ContactEmailForm.module.css";
 import SuccessOrFail from "./SuccessOrFail";
 import { useRef, useState, useEffect } from "react";
 
+type Email = {
+  email: string;
+  subject: string;
+  message: string;
+};
+
 export default function ContactEmailForm() {
   const emailRef = useRef<HTMLInputElement>(null);
   const subjectRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
-  const [contactContent, setContactContent] = useState({});
+
   const [submitComplete, setSubmitComplete] = useState(false);
 
   const submitHandler = async (e: React.MouseEvent<HTMLFormElement>) => {
@@ -19,23 +25,11 @@ export default function ContactEmailForm() {
       const subject = subjectRef.current.value;
       const message = messageRef.current.value;
 
-      setContactContent({
+      await sendEmail({
         email,
         subject,
         message,
       });
-
-      const res = await fetch("http://localhost:3002/api/contact", {
-        method: "POST",
-        body: JSON.stringify({
-          email: email,
-          subject: subject,
-          message: message,
-        }),
-      });
-
-      const data = res.json();
-      console.log(data);
 
       emailRef.current.value = "";
       subjectRef.current.value = "";
@@ -43,6 +37,29 @@ export default function ContactEmailForm() {
 
       setSubmitComplete(true);
     }
+  };
+
+  const sendEmail = async ({ email, subject, message }: Email) => {
+    try {
+      const res = await fetch("http://localhost:3002/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          subject,
+          message,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("서버 요청에 실패하였습니다!");
+      }
+
+      const data = await res.json();
+      console.log(data);
+    } catch (err) {}
   };
 
   useEffect(() => {
@@ -53,7 +70,7 @@ export default function ContactEmailForm() {
     return () => {
       clearTimeout(showSumbitComplte);
     };
-  }, [contactContent]);
+  }, [submitComplete]);
 
   return (
     <>
