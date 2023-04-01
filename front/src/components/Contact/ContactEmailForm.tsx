@@ -11,7 +11,7 @@ export default function ContactEmailForm() {
   const [contactContent, setContactContent] = useState({});
   const [submitComplete, setSubmitComplete] = useState(false);
 
-  const submitHandler = (e: React.MouseEvent<HTMLFormElement>) => {
+  const submitHandler = async (e: React.MouseEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (emailRef.current && subjectRef.current && messageRef.current) {
@@ -25,6 +25,18 @@ export default function ContactEmailForm() {
         message,
       });
 
+      const res = await fetch("http://localhost:3002/api/contact", {
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+          subject: subject,
+          message: message,
+        }),
+      });
+
+      const data = res.json();
+      console.log(data);
+
       emailRef.current.value = "";
       subjectRef.current.value = "";
       messageRef.current.value = "";
@@ -34,8 +46,6 @@ export default function ContactEmailForm() {
   };
 
   useEffect(() => {
-    console.log(contactContent);
-
     const showSumbitComplte = setTimeout(() => {
       setSubmitComplete(false);
     }, 3000);
