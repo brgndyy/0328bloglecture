@@ -13,9 +13,6 @@ export const metadata: Metadata = {
     template: "BRGNDY의 블로그 || %s",
   },
   description: "BRGNDY 개인 블로그",
-  icons: {
-    icon: "favicon.ico",
-  },
 };
 
 const myFont = localFont({
